@@ -1,0 +1,433 @@
+[
+    {
+        "question": "Name something associated with a witch.",
+        "answers": [
+            {
+                "score": 50,
+                "text": "Broomstick"
+            },
+            {
+                "score": 19,
+                "text": "Halloween"
+            },
+            {
+                "score": 8,
+                "text": "Pointed Hat"
+            },
+            {
+                "score": 8,
+                "text": "Spells/Magic Brew"
+            }
+        ]
+    },
+    {
+        "question": "Name a popular Halloween movie.",
+        "answers": [
+            {
+                "score": 57,
+                "text": "Hocus Pocus"
+            },
+            {
+                "score": 16,
+                "text": "Halloween"
+            },
+            {
+                "score": 13,
+                "text": "It's the Great Pumpkin Charlie Brown"
+            },
+            {
+                "score": 5,
+                "text": "Friday the 13th"
+            },
+            {
+                "score": 4,
+                "text": "Nightmare Before Christmas"
+            },
+            {
+                "score": 3,
+                "text": "HalloweenTown"
+            },
+            {
+                "score": 2,
+                "text": "Beetlejuice"
+            }
+        ]
+    },
+    {
+        "question": "If you were running from a vampire, name something you wish you had:",
+        "answers": [
+            {
+                "score": 33,
+                "text": "Cross"
+            },
+            {
+                "score": 24,
+                "text": "Stake"
+            },
+            {
+                "score": 20,
+                "text": "Garlic"
+            },
+            {
+                "score": 7,
+                "text": "A Gun"
+            },
+            {
+                "score": 4,
+                "text": "Holy Water"
+            }
+        ]
+    },
+    {
+        "question": "Name something you would see at the seance.",
+        "answers": [
+            {
+                "score": 34,
+                "text": "Candles"
+            },
+            {
+                "score": 24,
+                "text": "Ghosts/Spirits"
+            },
+            {
+                "score": 22,
+                "text": "People/Join Hands"
+            },
+            {
+                "score": 9,
+                "text": "Crystal Ball"
+            }
+        ]
+    },
+    {
+        "question": "Name somewhere in a house a kid may think a monster is hiding.",
+        "answers": [
+            {
+                "score": 59,
+                "text": "Closet"
+            },
+            {
+                "score": 34,
+                "text": "Under the Bed"
+            },
+            {
+                "score": 3,
+                "text": "In the Basement"
+            },
+            {
+                "score": 2,
+                "text": "In the Attic"
+            },
+            {
+                "score": 2,
+                "text": "Upstairs"
+            }
+        ]
+    },
+    {
+        "question": "In a horror movie, name a tool that might be used to kill somebody.",
+        "answers": [
+            {
+                "score": 41,
+                "text": "Knife/Machete"
+            },
+            {
+                "score": 32,
+                "text": "Axe/Hatchet"
+            },
+            {
+                "score": 14,
+                "text": "Chain Saw"
+            },
+            {
+                "score": 5,
+                "text": "Gun"
+            }
+        ]
+    },
+    {
+        "question": "Name something you do Halloween night when you run out of candy.",
+        "answers": [
+            {
+                "score": 61,
+                "text": "Turn off Lights"
+            },
+            {
+                "score": 16,
+                "text": "Don't Answer/Sleep"
+            },
+            {
+                "score": 9,
+                "text": "Give Money"
+            },
+            {
+                "score": 3,
+                "text": "Give/Make Cookies"
+            },
+            {
+                "score": 3,
+                "text": "Your Kids' Candy"
+            },
+            {
+                "score": 3,
+                "text": "Give Fruit"
+            }
+        ]
+    },
+    {
+        "question": "Name a Halloween monster.",
+        "answers": [
+            {
+                "score": 40,
+                "text": "Frankenstein"
+            },
+            {
+                "score": 18,
+                "text": "Ghost"
+            },
+            {
+                "score": 11,
+                "text": "Mummy"
+            },
+            {
+                "score": 10,
+                "text": "Werewolf"
+            },
+            {
+                "score": 9,
+                "text": "Witch"
+            },
+            {
+                "score": 5,
+                "text": "Zombie"
+            },
+            {
+                "score": 3,
+                "text": "Vampire"
+            }
+        ]
+    },
+    {
+        "question": "Name a type of animal a witch turns people into.",
+        "answers": [
+            {
+                "score": 58,
+                "text": "Frog/Toad"
+            },
+            {
+                "score": 14,
+                "text": "Cat"
+            },
+            {
+                "score": 13,
+                "text": "Mouse/Rat"
+            },
+            {
+                "score": 4,
+                "text": "Pig"
+            },
+            {
+                "score": 4,
+                "text": "Rabbit"
+            },
+            {
+                "score": 3,
+                "text": "Donkey"
+            }
+        ]
+    },
+    {
+        "question": "Name a popular Halloween song.",
+        "answers": [
+            {
+                "score": 66,
+                "text": "Monster Mash"
+            },
+            {
+                "score": 14,
+                "text": "Thriller "
+            },
+            {
+                "score": 6,
+                "text": "I Put a Spell on You"
+            },
+            {
+                "score": 5,
+                "text": "This is Halloween "
+            },
+            {
+                "score": 4,
+                "text": "Ghostbusters Theme Song"
+            },
+            {
+                "score": 3,
+                "text": "Five Little Pumpkins"
+            },
+            {
+                "score": 2,
+                "text": "Purple People Eater"
+            }
+        ]
+    },
+    {
+        "question": "Name a popular Halloween costume.",
+        "answers": [
+            {
+                "score": 44,
+                "text": "Witch"
+            },
+            {
+                "score": 19,
+                "text": "Ghost"
+            },
+            {
+                "score": 16,
+                "text": "Princess"
+            },
+            {
+                "score": 10,
+                "text": "Superhero"
+            },
+            {
+                "score": 4,
+                "text": "Pirate"
+            },
+            {
+                "score": 3,
+                "text": "Vampire"
+            },
+            {
+                "score": 2,
+                "text": "Cat"
+            }
+        ]
+    },
+    {
+        "question": "Name something that might be a pizza topping in a horror movie.",
+        "answers": [
+            {
+                "score": 24,
+                "text": "Eyeballs"
+            },
+            {
+                "score": 19,
+                "text": "Blood"
+            },
+            {
+                "score": 12,
+                "text": "Worms"
+            },
+            {
+                "score": 11,
+                "text": "Spiders/Bugs"
+            },
+            {
+                "score": 11,
+                "text": "Guts/Organs"
+            },
+            {
+                "score": 9,
+                "text": "Fingers"
+            },
+            {
+                "score": 3,
+                "text": "Dead Mouse"
+            }
+        ]
+    },
+    {
+        "question": "Name something connected to Halloween.",
+        "answers": [
+            {
+                "score": 35,
+                "text": "Pumpkins"
+            },
+            {
+                "score": 22,
+                "text": "Witches"
+            },
+            {
+                "score": 12,
+                "text": "Masks"
+            },
+            {
+                "score": 9,
+                "text": "Ghosts/Spooks"
+            },
+            {
+                "score": 5,
+                "text": "Candy"
+            },
+            {
+                "score": 3,
+                "text": "Trick or Treat"
+            }
+        ]
+    },
+    {
+        "question": "Tell me a prank that kids pull on Halloween.",
+        "answers": [
+            {
+                "score": 35,
+                "text": "T.P. Houses"
+            },
+            {
+                "score": 25,
+                "text": "Throw Eggs"
+            },
+            {
+                "score": 10,
+                "text": "Ding-Dong Ditch"
+            },
+            {
+                "score": 10,
+                "text": "Jump Out & Scare"
+            },
+            {
+                "score": 5,
+                "text": "Soap Windows"
+            },
+            {
+                "score": 4,
+                "text": "Smash Pumpkins"
+            }
+        ]
+    },
+    {
+        "question": "There's a dead body in your house. Cops will blame you. What do you do?",
+        "answers": [
+            {
+                "score": 28,
+                "text": "Bury it"
+            },
+            {
+                "score": 18,
+                "text": "Hide it/In Fridge"
+            },
+            {
+                "score": 11,
+                "text": "Call Cops anyway"
+            },
+            {
+                "score": 10,
+                "text": "Leave it/Don't Touch"
+            },
+            {
+                "score": 7,
+                "text": "Burn it"
+            },
+            {
+                "score": 7,
+                "text": "Take to neighbor's"
+            },
+            {
+                "score": 5,
+                "text": "Toss in Lake"
+            },
+            {
+                "score": 5,
+                "text": "Trash/Dumpster"
+            }
+        ]
+    }
+]
