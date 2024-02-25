@@ -5,7 +5,7 @@ import AnswersGrid from "@/components/AnswersGrid"
 export default function Home() {
   return (
     <React.Fragment>
-      <div className=" bg-orange-500">
+      <div className=" bg-grey-500">
         <Header />
         <AnswersGrid />
       </div>

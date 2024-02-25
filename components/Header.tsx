@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <React.Fragment>
             <h1 className="text-3xl font-bold text-center">
-                Family Feud
+                My Wordle
             </h1>
         </React.Fragment>
     )
