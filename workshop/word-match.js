@@ -115,11 +115,68 @@ testPatternMatch()
  */
 const isLength = (length) => (val) => val?.length === length
 
+/**
+ * Get a predicate to decide if a word contains a given set of letters.
+ * @param {string|string[]} letters Either a string containing the letters, or an array of letters. ie, "aabc" and ["a", "a", "b", "c"] are acceptable. 
+ *                                  Order doesn't matter. Repeats are considered (ie to filter words that have 2 or more of a given letter).
+ * @returns {import("./all-pass.js").Predicate}
+ */
+const containsLetters = (letters) => {
+    // not sure if this can be done in 1 single regex.
+    const letterArray = Array.isArray(letters) ? letters : letters?.split("")
+    if (!letterArray) {
+        throw new Error("Error: Need to provide a string or array of letters")
+    }
+
+    const letterCount = letterArray.reduce((accum, cur) => {
+        if (accum[cur]) {
+            accum[cur]++
+        } else {
+            accum[cur] = 1
+        }
+
+        return accum
+    }, {})
+
+    const regexList = Object.entries(letterCount).map(([letter, count]) => {
+        // regex to say "n or more occurrences of this letter" ("count" is "n"), don't have to be consecutive
+        // return new RegExp(letter + "{" + count + ",}")
+        return new RegExp(
+            new Array(count).fill(letter).join(".*")
+        )
+    })
+
+    return (val) => {
+        return regexList.every(regex => regex.test(val))
+    }
+}
+
+const testContainsLetters = () => {
+    assert.equal(containsLetters("act")("act"), true)
+    assert.equal(containsLetters("act")("cat"), true)
+    assert.equal(containsLetters("act")("tac"), true)
+    assert.equal(containsLetters("act")("atc"), true)
+    assert.equal(containsLetters("act")("cta"), true)
+    assert.equal(containsLetters("act")("cathy"), true)
+    assert.equal(containsLetters("act")("call"), false)
+    assert.equal(containsLetters("lh")("hello"), true)
+    assert.equal(containsLetters("lhl")("hello"), true)
+    assert.equal(containsLetters("llh")("hello"), true)
+    assert.equal(containsLetters("hll")("hello"), true)
+    assert.equal(containsLetters("hhl")("hello"), false)
+    assert.equal(containsLetters("ana")("catan"), true)
+    assert.equal(containsLetters("aa")("catan"), true)
+    assert.equal(containsLetters("aa")("katana"), true)
+    assert.equal(containsLetters("aaa")("katana"), true)
+}
+testContainsLetters()
+
 const findMyPattern = async () => {
     const pattern = "**art"
     await findMatchingWords([
-        isLength(5),
-        patternMatch(pattern),
+        isLength(7),
+        // patternMatch(pattern),
+        containsLetters("lnou")
     ])
 
     // could also do findMatchingWords([isLength(5)])
