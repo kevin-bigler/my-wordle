@@ -43,12 +43,18 @@ const findMatchingWords = async (filters) => {
     // console.log("file:", file)
     for await (const line of file.readLines()) {
         if (allPass(filters)(line)) {
-            console.log(line);
+            const annotation = isAllUniqueLetters(line) ? "*" : ""
+            console.log(line + annotation)
             results.push(line)
         }
     }
 
     return results
+}
+
+const isAllUniqueLetters = (s) => {
+    const letters = s.split("")
+    return letters.length === new Set(letters).size
 }
 
 /**
@@ -171,15 +177,66 @@ const testContainsLetters = () => {
 }
 testContainsLetters()
 
+/**
+ * Get a predicate to determine a value is NOT in a given list of words
+ * @param {string[]} words Black list of words to treat as a "miss" (false); any other value is a "hit" (true)
+ * @returns {import("./all-pass.js").Predicate}
+ * TODO: add test
+ */
+const notWords = (words) => (val) => {
+    return !words.includes(val)
+}
+
+/**
+ * Generate a Predicate function to test if a string DOES NOT match a simple pattern. Pattern can be letters or * symbols, as placeholders for individual letters.
+ * Opposite of {@link patternMatch}
+ * 
+ * Example:
+ * pattern = "**art"
+ * DOES NOT match = eg "heart", "start"
+ * 
+ * @param {string} pattern
+ * @returns {import("./all-pass").Predicate} 
+ * TODO test
+ */
+const notPattern = (pattern) => {
+    const pred = patternMatch(pattern)
+    return (val) => !pred(val)
+}
+
+/**
+ * Get a predicate to decide if a word contains a given set of letters.
+ * @param {string|string[]} letters Either a string containing the letters, or an array of letters. ie, "aabc" and ["a", "a", "b", "c"] are acceptable. 
+ *                                  Order doesn't matter. Repeats are considered (ie to filter words that have 2 or more of a given letter).
+ * @returns {import("./all-pass.js").Predicate}
+ */
+const excludesLetters = (letters) => {
+    const letterArray = Array.isArray(letters) ? letters : letters?.split("")
+    if (!letterArray) {
+        throw new Error("Error: Need to provide a string or array of letters")
+    }
+
+    const regex = new RegExp("^[^" + letterArray.join("") + "]+$")
+
+    return (val) => regex.test(val)
+}
+
 const findMyPattern = async () => {
-    const pattern = "**art"
     await findMatchingWords([
         isLength(7),
-        // patternMatch(pattern),
-        containsLetters("lnou")
+        patternMatch("****e*y"),
+        containsLetters("rla"),
+        notWords([
+            "bravely",
+        ]),
+        // notPattern(""),
+        excludesLetters("ht"),
     ])
 
     // could also do findMatchingWords([isLength(5)])
 }
+
+// TODO: accept a filter of "NOT these words (array)"
+// TODO: this pattern does NOT match (eg we know a given letter is NOT in a certain position)
 
 findMyPattern()
